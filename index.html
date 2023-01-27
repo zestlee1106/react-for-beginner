@@ -11,7 +11,9 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        // setCounter(counter + 1);
+        // 함수형으로 쓰는 것이 현재 state 를 보장할 수 있기 때문에 함수형으로 쓰는 것이 더 좋다.
+        setCounter((current) => current + 1);
       };
       return (
         <div>
